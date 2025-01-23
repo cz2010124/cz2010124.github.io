@@ -19,22 +19,23 @@
   <meta name="author" content="cz2010124">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目链接题目描述有一个长度为 $n$ 的数列 ${a_n}$ 和 $m$ 次操作，操作内容如下：  格式为 1 l r，表示求 $\sum \limits _{i&#x3D;l}^{r} a_i$ 的值并输出。 格式为 2 l r x，表示对区间 $[l,r]$ 内每个数取模，模数为 $x$。 格式为 3 k x，表示将 $a_k$ 修改为 $x$。  $1 \leq n, m \leq 10^5">
+    <meta name="description" content="Ctrl V + Enter 连点代码123456789101112131415#include &lt;Windows.h&gt;int main() &#123;	int n &#x3D; 77; &#x2F;&#x2F; 连击次数	Sleep(1000);	keybd_event(17, 0, 0, 0); &#x2F;&#x2F;按下 Ctrl 键	while(n--) &#123;		keybd_event(&#x27;V&#x27;,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Child and Sequence 题解">
-<meta property="og:url" content="http://example.com/2025/01/23/text2/index.html">
+<meta property="og:title" content="键盘连击器">
+<meta property="og:url" content="http://example.com/2025/01/23/text4/index.html">
 <meta property="og:site_name" content="cz2010124&#39;s Blogs">
-<meta property="og:description" content="题目链接题目描述有一个长度为 $n$ 的数列 ${a_n}$ 和 $m$ 次操作，操作内容如下：  格式为 1 l r，表示求 $\sum \limits _{i&#x3D;l}^{r} a_i$ 的值并输出。 格式为 2 l r x，表示对区间 $[l,r]$ 内每个数取模，模数为 $x$。 格式为 3 k x，表示将 $a_k$ 修改为 $x$。  $1 \leq n, m \leq 10^5">
+<meta property="og:description" content="Ctrl V + Enter 连点代码123456789101112131415#include &lt;Windows.h&gt;int main() &#123;	int n &#x3D; 77; &#x2F;&#x2F; 连击次数	Sleep(1000);	keybd_event(17, 0, 0, 0); &#x2F;&#x2F;按下 Ctrl 键	while(n--) &#123;		keybd_event(&#x27;V&#x27;,">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-23T06:11:44.723Z">
-<meta property="article:modified_time" content="2025-01-23T06:13:10.242Z">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/x9vwxfqk.png">
+<meta property="article:published_time" content="2025-01-23T07:32:27.162Z">
+<meta property="article:modified_time" content="2025-01-23T07:33:06.103Z">
 <meta property="article:author" content="cz2010124">
-<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/x9vwxfqk.png">
   
   
   
-  <title>The Child and Sequence 题解 - cz2010124&#39;s Blogs</title>
+  <title>键盘连击器 - cz2010124&#39;s Blogs</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="The Child and Sequence 题解"></span>
+            <span id="subtitle" data-typed-text="键盘连击器"></span>
           
         </div>
 
@@ -216,7 +217,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-23 14:11" pubdate>
+        <time datetime="2025-01-23 15:32" pubdate>
           2025年1月23日 下午
         </time>
       </span>
@@ -228,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          977 字
+          91 字
         
       </span>
     
@@ -239,7 +240,7 @@
         
         
         
-          9 分钟
+          1 分钟
         
       </span>
     
@@ -276,48 +277,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">The Child and Sequence 题解</h1>
+            <h1 id="seo-header">键盘连击器</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/438/D">题目链接</a></h3><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>有一个长度为 $n$ 的数列 ${a_n}$ 和 $m$ 次操作，操作内容如下：</p>
-<ol>
-<li>格式为 <code>1 l r</code>，表示求 $\sum \limits _{i&#x3D;l}^{r} a_i$ 的值并输出。</li>
-<li>格式为 <code>2 l r x</code>，表示对区间 $[l,r]$ 内每个数取模，模数为 $x$。</li>
-<li>格式为 <code>3 k x</code>，表示将 $a_k$ 修改为 $x$。</li>
-</ol>
-<p>$1 \leq n, m \leq 10^5$ ， $1 \leq l, r, k, x, a_i \leq 10^9$</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>通过题目中两个区间操作不难发现此题需要用 <strong>线段树</strong> 维护， 本题解着重讲解操作 $2$。</p>
-<ul>
-<li><p>对于操作 $1$ ：线段树可以轻松维护区间和的查询和维护。</p>
-</li>
-<li><p>对于操作 $3$ ：线段树也支持单点修改。</p>
-<ul>
-<li>对于操作 $1$ 和操作 $3$ ，可以先利用线段树做出 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3374">P3374 【模板】树状数组 1</a> 这题，如果实在做不出来 <del>那你线段树学了个啥</del> 可以去参考一下<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/solution/P3374">题解</a> 。</li>
-</ul>
-</li>
-<li><p>对于操作 $2$ ：我们可以探究一下 <strong>正整数</strong> 之间取模的性质：</p>
-<ul>
-<li><p>我们设 $p$ 为模数， $x$ 为被模数，关于 $x\ \text{mod}\ p$ 的值有以下几点性质：</p>
-<ul>
-<li>性质 $1$ ：当 $x &lt; p$ 时：$x\ \text{mod}\ p &#x3D; x$ 。</li>
-<li>性质 $2$ ：当 $x \geq p$ 时： $x\ \text{mod}\ p &lt; \dfrac{x}{2}$ 。</li>
-</ul>
-<p>所以对于性质 $1$ 我们发现所有小于模数 $p$ 的被模数 $x$ 对答案没有影响，所以我们可以用线段树维护一个区间 $max$ ，如果区间 $max$ 大于模数 $p$ 我们可以选择不修改。对于性质 $2$ ，每次取模都会使 $x$ 至少缩减 $\frac{1}{2}$ ，所以至多修改 $\log_2 x$ 次，所以对于区间的修改我们以选择暴力的对区间中的每个节点修改。</p>
-</li>
-<li><p>对于性质 $2$ ，我们给出证明：</p>
-<p>设 $x &#x3D; kp + c$ ，($c$ 表示  $x\ \text{mod}\ p$ 的值，$p$ 为模数， $kp$ 表示小于等于 $x$ 可以被 $p$ 整除的最大正整数)  </p>
-<p>根据取模性质得出 $c &lt; p$ ，又因为 $p \in \text{N}^* , kp \in \text{N}^<em>$ ，所以 $k \in \text{N}^</em>$ ，所以 $k \geq 1$ 。</p>
-<p>然后我们就得出以下式子：</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>$$<br>c &lt; kp\<br>c + c &lt; kp + c\<br>2c &lt; kp + c\<br>2c &lt; x\<br>c &lt; \frac{x}{2}\<br>x\ \text{mod}\ p &lt; \frac{x}{2}(x\geq p)<br>$$</p>
-<hr>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100010</span>;<br><br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">long</span> <span class="hljs-type">long</span> a[N];<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SegmentTree</span> &#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">pushup</span><span class="hljs-params">(<span class="hljs-type">int</span> p)</span> </span>&#123;<br>		t[p].sum = t[p &lt;&lt; <span class="hljs-number">1</span>].sum + t[(p &lt;&lt; <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>].sum;<br>		t[p].max = std::<span class="hljs-built_in">max</span>(t[p &lt;&lt; <span class="hljs-number">1</span>].max, t[(p &lt;&lt; <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>].max);<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-type">int</span> p, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>&#123;<br>		t[p].l = l;<br>		t[p].r = r;<br>		<span class="hljs-keyword">if</span> (l == r) &#123;<br>			t[p].sum = a[l];<br>			t[p].max = a[l];<br>			<span class="hljs-keyword">return</span>;<br>		&#125;<br>		<span class="hljs-type">int</span> mid = (t[p].l + t[p].r) &gt;&gt; <span class="hljs-number">1</span>;<br>		<span class="hljs-built_in">build</span>(p &lt;&lt; <span class="hljs-number">1</span>, l, mid);<br>		<span class="hljs-built_in">build</span>((p &lt;&lt; <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>, mid + <span class="hljs-number">1</span>, r);<br>		<span class="hljs-built_in">pushup</span>(p);<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">change_cover</span><span class="hljs-params">(<span class="hljs-type">int</span> p, <span class="hljs-type">int</span> x, <span class="hljs-type">long</span> <span class="hljs-type">long</span> k)</span> </span>&#123;<br>		<span class="hljs-keyword">if</span> (t[p].l == t[p].r) &#123;<br>			t[p].sum = k;<br>			t[p].max = k;<br>			<span class="hljs-keyword">return</span>;<br>		&#125;<br>		<span class="hljs-type">int</span> mid = (t[p].l + t[p].r) &gt;&gt; <span class="hljs-number">1</span>;<br>		<span class="hljs-keyword">if</span> (x &lt;= mid) <span class="hljs-built_in">change_cover</span>(p &lt;&lt; <span class="hljs-number">1</span>, x, k);<br>		<span class="hljs-keyword">else</span> <span class="hljs-built_in">change_cover</span>((p &lt;&lt; <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>, x, k);<br>		<span class="hljs-built_in">pushup</span>(p);<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">change_mod</span><span class="hljs-params">(<span class="hljs-type">int</span> p, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r, <span class="hljs-type">long</span> <span class="hljs-type">long</span> k)</span> </span>&#123;<br>		<span class="hljs-keyword">if</span> (t[p].max &lt; k) <span class="hljs-keyword">return</span>;<br>		<span class="hljs-keyword">if</span> (t[p].l == t[p].r) &#123;<br>			t[p].sum %= k;<br>			t[p].max %= k;<br>			<span class="hljs-keyword">return</span>;<br>		&#125;<br>		<span class="hljs-type">int</span> mid = (t[p].l + t[p].r) &gt;&gt; <span class="hljs-number">1</span>;<br>		<span class="hljs-keyword">if</span> (l &lt;= mid) <span class="hljs-built_in">change_mod</span>(p &lt;&lt; <span class="hljs-number">1</span>, l, r, k);<br>		<span class="hljs-keyword">if</span> (r &gt; mid) <span class="hljs-built_in">change_mod</span>((p &lt;&lt; <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>, l, r, k);<br>		<span class="hljs-built_in">pushup</span>(p);<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-type">long</span> <span class="hljs-type">long</span> <span class="hljs-title">ask</span><span class="hljs-params">(<span class="hljs-type">int</span> p, <span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>&#123;<br>		<span class="hljs-keyword">if</span> (l &lt;= t[p].l &amp;&amp; r &gt;= t[p].r)<br>			<span class="hljs-keyword">return</span> t[p].sum;<br>		<span class="hljs-type">long</span> <span class="hljs-type">long</span> sum = <span class="hljs-number">0</span>;<br>		<span class="hljs-type">int</span> mid = (t[p].l + t[p].r) &gt;&gt; <span class="hljs-number">1</span>;<br>		<span class="hljs-keyword">if</span> (l &lt;= mid) sum += <span class="hljs-built_in">ask</span>(p &lt;&lt; <span class="hljs-number">1</span>, l, r);<br>		<span class="hljs-keyword">if</span> (r &gt; mid) sum += <span class="hljs-built_in">ask</span>((p &lt;&lt; <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>, l, r);<br>		<span class="hljs-keyword">return</span> sum;<br>	&#125;<br><span class="hljs-keyword">private</span>:<br>	<span class="hljs-keyword">struct</span> <span class="hljs-title class_">point</span> &#123;<br>		<span class="hljs-type">int</span> l, r;<br>		<span class="hljs-type">long</span> <span class="hljs-type">long</span> sum, max;<br>	&#125; t[N &lt;&lt; <span class="hljs-number">2</span>];<br>&#125; t;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>, &amp;a[i]);<br>	t.<span class="hljs-built_in">build</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, n);<br>	<span class="hljs-keyword">while</span> (m--) &#123;<br>		<span class="hljs-type">int</span> op;<br>		<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;op);<br>		<span class="hljs-keyword">if</span> (op == <span class="hljs-number">1</span>) &#123;<br>			<span class="hljs-type">int</span> l, r;<br>			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;l, &amp;r);<br>			<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>, t.<span class="hljs-built_in">ask</span>(<span class="hljs-number">1</span>, l, r));<br>		&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (op == <span class="hljs-number">2</span>) &#123;<br>			<span class="hljs-type">long</span> <span class="hljs-type">long</span> k;<br>			<span class="hljs-type">int</span> l, r;<br>			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%lld&quot;</span>, &amp;l, &amp;r, &amp;k);<br>			t.<span class="hljs-built_in">change_mod</span>(<span class="hljs-number">1</span>, l, r, k);<br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			<span class="hljs-type">int</span> k;<br>			<span class="hljs-type">long</span> <span class="hljs-type">long</span> x;<br>			<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%lld&quot;</span>, &amp;k, &amp;x);<br>			t.<span class="hljs-built_in">change_cover</span>(<span class="hljs-number">1</span>, k, x);<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h3 id="Ctrl-V-Enter-连点代码"><a href="#Ctrl-V-Enter-连点代码" class="headerlink" title="Ctrl V + Enter 连点代码"></a><code>Ctrl V + Enter</code> 连点代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;Windows.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-type">int</span> n = <span class="hljs-number">77</span>; <span class="hljs-comment">// 连击次数</span><br>	<span class="hljs-built_in">Sleep</span>(<span class="hljs-number">1000</span>);<br>	<span class="hljs-built_in">keybd_event</span>(<span class="hljs-number">17</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//按下 Ctrl 键</span><br>	<span class="hljs-keyword">while</span>(n--) &#123;<br>		<span class="hljs-built_in">keybd_event</span>(<span class="hljs-string">&#x27;V&#x27;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>		<span class="hljs-built_in">keybd_event</span>(<span class="hljs-string">&#x27;V&#x27;</span>, <span class="hljs-number">0</span>, KEYEVENTF_KEYUP, <span class="hljs-number">0</span>);<br>		<span class="hljs-built_in">keybd_event</span>(<span class="hljs-number">13</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>		<span class="hljs-built_in">keybd_event</span>(<span class="hljs-number">13</span>, <span class="hljs-number">0</span>, KEYEVENTF_KEYUP, <span class="hljs-number">0</span>);<br>	&#125;<br>	<span class="hljs-built_in">keybd_event</span>(<span class="hljs-number">17</span>, <span class="hljs-number">0</span>, KEYEVENTF_KEYUP, <span class="hljs-number">0</span>); <span class="hljs-comment">// 抬起 Ctrl 键 </span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">keybd_event</span>(<span class="hljs-comment">/*需要按下的键*/</span>, <span class="hljs-number">0</span>， <span class="hljs-number">0</span>， <span class="hljs-number">0</span>);<br><span class="hljs-built_in">keybd_event</span>(<span class="hljs-comment">/*需要抬起的键*/</span>, <span class="hljs-number">0</span>, KEYEVENT_KEYUP, <span class="hljs-number">0</span>);<br></code></pre></td></tr></table></figure>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/x9vwxfqk.png" srcset="/img/loading.gif" lazyload></p>
+
                 
               </div>
             
@@ -325,13 +293,6 @@
             <div>
               <div class="post-metas my-3">
   
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E9%A2%98%E8%A7%A3/" class="print-no-link">#题解</a>
-      
-    </div>
   
 </div>
 
@@ -341,8 +302,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>The Child and Sequence 题解</div>
-      <div>http://example.com/2025/01/23/text2/</div>
+      <div>键盘连击器</div>
+      <div>http://example.com/2025/01/23/text4/</div>
     </div>
     <div class="license-meta">
       
@@ -386,9 +347,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/01/23/text3/" title="CarYon：一款基于C++的OI/ACM 比赛测试数据生成器">
+                      <a href="/2025/01/23/text5/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CarYon：一款基于C++的OI/ACM 比赛测试数据生成器</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,8 +357,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/23/text1/" title="T566848 SUM 题解">
-                        <span class="hidden-mobile">T566848 SUM 题解</span>
+                      <a href="/2025/01/23/text3/" title="CarYon：一款基于C++的OI/ACM 比赛测试数据生成器">
+                        <span class="hidden-mobile">CarYon：一款基于C++的OI/ACM 比赛测试数据生成器</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
